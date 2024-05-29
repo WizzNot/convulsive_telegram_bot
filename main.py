@@ -1,8 +1,8 @@
 from flask import Flask, request, jsonify
 import telebot
 
-token = open("bot_key.txt", "r").readline()
-user_id = open("user_id.txt", "r").readline()
+token = open("bot_key.txt", "r").readline().rstrip(" ").rstrip("\n")
+user_id = open("user_id.txt", "r").readline().rstrip(" ").rstrip("\n")
 
 app = Flask(__name__)
 bot = telebot.TeleBot(token)
